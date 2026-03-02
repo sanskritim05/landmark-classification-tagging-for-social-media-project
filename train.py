@@ -14,7 +14,6 @@ def train_one_epoch(train_dataloader, model, optimizer, loss):
     """
 
     if torch.cuda.is_available():
-        # Transfer the model to the GPU
         model = model.cuda()
 
     # Set the model to training mode

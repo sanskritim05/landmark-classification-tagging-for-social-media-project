@@ -15,7 +15,6 @@
     var widgetRendererSrc = 'https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js';
     var widgetState;
 
-    // Fallback for older version:
     try {
       widgetState = mimeElement && JSON.parse(mimeElement.innerHTML);
 

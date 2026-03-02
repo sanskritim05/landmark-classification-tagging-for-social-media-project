@@ -17,7 +17,7 @@ class Predictor(nn.Module):
         self.model = model.eval()
         self.class_names = class_names
 
-        # We use nn.Sequential and not nn.Compose because the former
+        # Use nn.Sequential and not nn.Compose because the former
         # is compatible with torch.script, while the latter isn't
         self.transforms = nn.Sequential(
             T.Resize([256, ]),  # We use single int value inside a list due to torchscript type restrictions

@@ -12,7 +12,7 @@ def get_data_loaders(
     batch_size: int = 32, valid_size: float = 0.2, num_workers: int = 1, limit: int = -1
 ):
     """
-    Create and returns the train_one_epoch, validation and test data loaders.
+    Create and returns the train_one_epoch, validation, and test data loaders.
 
     :param batch_size: size of the mini-batches
     :param valid_size: fraction of the dataset to use for validation. For example 0.2

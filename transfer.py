@@ -5,7 +5,7 @@ import torch.nn as nn
 
 
 def get_model_transfer_learning(model_name="resnet18", n_classes=50):
-    # Get the requested architecture
+    # get the requested architecture
     if hasattr(models, model_name):
         model_transfer = getattr(models, model_name)(pretrained=True)
     else:
@@ -13,11 +13,11 @@ def get_model_transfer_learning(model_name="resnet18", n_classes=50):
         raise ValueError(f"Model {model_name} is not known. List of available models: "
                          f"https://pytorch.org/vision/{torchvision_major_minor}/models.html")
 
-    # Freeze all parameters in the model
+    # freeze all parameters in the model
     for param in model_transfer.parameters():
         param.requires_grad = False
 
-    # Add the linear layer at the end with the appropriate number of classes
+    # add the linear layer at the end with the appropriate number of classes
     # 1. Get the number of features extracted by the backbone
     num_ftrs = model_transfer.fc.in_features
 

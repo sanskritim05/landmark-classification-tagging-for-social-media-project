@@ -6,13 +6,13 @@ import tarfile
 
 def create_submit_pkg():
 
-    # Source files
+    # source files
     src_files = glob.glob("src/*.py")
 
-    # Notebooks
+    # notebooks
     notebooks = glob.glob("*.ipynb")
 
-    # Genereate HTML files from the notebooks
+    # genereate HTML files from the notebooks
     for nb in notebooks:
         cmd_line = f"jupyter nbconvert --to html {nb}"
 

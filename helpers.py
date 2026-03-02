@@ -10,7 +10,6 @@ import multiprocessing
 import matplotlib.pyplot as plt
 import concurrent.futures
 
-# Let's see if we have an available GPU
 import numpy as np
 import random
 
